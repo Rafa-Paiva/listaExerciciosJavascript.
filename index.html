@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área do Trapézio</title>
+</head>
+<body>
+  <h2>Área do Trapézio</h2>
+
+  <p>Base maior (B): <input id="baseMaior" type="number"></p>
+  <p>Base menor (b): <input id="baseMenor" type="number"></p>
+  <p>Altura (h): <input id="altura" type="number"></p>
+
+  <button onclick="calcularArea()">Calcular</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function calcularArea() {
+      var B = parseFloat(document.getElementById("baseMaior").value);
+      var b = parseFloat(document.getElementById("baseMenor").value);
+      var h = parseFloat(document.getElementById("altura").value);
+
+      var area = ((B + b) * h) / 2;
+      document.getElementById("resultado").innerText = "Área: " + area;
+    }
+  </script>
+</body>
+</html>
